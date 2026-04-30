@@ -89,3 +89,22 @@ def calcula_pontos_full_house(dados):
         return soma
     else:
         return 0
+    
+# Q9
+def calcula_pontos_quadra(dados):
+    soma = 0
+    for dado in dados:
+        soma += dado
+
+    contagens = {}
+    for dado in dados:
+        if dado in contagens:
+            contagens[dado] += 1
+        else:
+            contagens[dado] = 1
+
+    for quantidade in contagens.values():
+        if quantidade >= 4:
+            return soma
+
+    return 0

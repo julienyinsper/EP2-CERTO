@@ -51,3 +51,14 @@ def calcula_pontos_sequencia_baixa(dados):
         return 15
     else:
         return 0
+    
+# Q7
+def calcula_pontos_sequencia_alta(dados):
+    dados_unicos = set(dados)
+
+    if {1, 2, 3, 4, 5}.issubset(dados_unicos):
+        return 30
+    elif {2, 3, 4, 5, 6}.issubset(dados_unicos):
+        return 30
+    else:
+        return 0

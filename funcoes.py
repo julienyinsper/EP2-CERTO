@@ -62,3 +62,30 @@ def calcula_pontos_sequencia_alta(dados):
         return 30
     else:
         return 0
+    
+# Q8
+def calcula_pontos_full_house(dados):
+    soma = 0
+    for dado in dados:
+        soma += dado
+
+    contagens = {}
+    for dado in dados:
+        if dado in contagens:
+            contagens[dado] += 1
+        else:
+            contagens[dado] = 1
+
+    tem_3 = False
+    tem_2 = False
+
+    for quantidade in contagens.values():
+        if quantidade == 3:
+            tem_3 = True
+        elif quantidade == 2:
+            tem_2 = True
+
+    if tem_3 and tem_2:
+        return soma
+    else:
+        return 0

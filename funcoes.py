@@ -38,3 +38,16 @@ def calcula_pontos_soma(dados):
     for dado in dados:
         soma += dado
     return soma
+
+# Q6
+def calcula_pontos_sequencia_baixa(dados):
+    dados_unicos = set(dados)
+    
+    if {1, 2, 3, 4}.issubset(dados_unicos):
+        return 15
+    elif {2, 3, 4, 5}.issubset(dados_unicos):
+        return 15
+    elif {3, 4, 5, 6}.issubset(dados_unicos):
+        return 15
+    else:
+        return 0

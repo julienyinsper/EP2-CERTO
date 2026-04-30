@@ -1,4 +1,5 @@
 # Q1
+import random
 def rolar_dados(numero):
     lista = []
     for i in range(numero):
@@ -126,3 +127,16 @@ def calcula_pontos_regra_avancada(dados):
         "sequencia_baixa": calcula_pontos_sequencia_baixa(dados),
         "sem_combinacao": calcula_pontos_soma(dados)
     }
+
+# Q12
+def faz_jogada(dados, categoria, cartela_de_pontos):
+    if categoria in cartela_de_pontos["regra_avancada"]:
+        pontos = calcula_pontos_regra_avancada(dados)
+        cartela_de_pontos["regra_avancada"][categoria] = pontos[categoria]
+
+    else:
+        categoria = int(categoria)
+        pontos = calcula_pontos_regra_simples(dados)
+        cartela_de_pontos["regra_simples"][categoria] = pontos[categoria]
+
+    return cartela_de_pontos

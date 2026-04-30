@@ -31,3 +31,10 @@ def calcula_pontos_regra_simples(dados):
         pontuacao[face] = soma
     
     return pontuacao
+
+# Q5
+def calcula_pontos_soma(dados):
+    soma = 0 
+    for dado in dados:
+        soma += dado
+    return soma
